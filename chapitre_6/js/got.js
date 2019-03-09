@@ -41,15 +41,12 @@ function getPersonnages(codeMaison) {
 
 // Créer une boucle forEach pour mettre le nom des maisons dans la liste déroulante
 maisons.forEach(nom => {
-  // Variable pour le nom des maisons
-  let nomMaison = maisons.nom;
-
   // Créer un nouvel élément dans le DOM de la liste déroulante
   let optionElt = document.createElement('option');
   // Définitions des attributs
-  optionElt.id = nomMaison;
+  optionElt.id = maisons.nom;
   optionElt.value = maisons.code;
-  optionElt.textContent = nomMaison;
+  optionElt.textContent = maisons.nom;
   // Insertion dans le DOM
   document.getElementById('maison').appendChild(optionElt);
 });
