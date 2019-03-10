@@ -44,9 +44,15 @@ maisons.forEach(nom => {
   // Créer un nouvel élément dans le DOM de la liste déroulante
   let optionElt = document.createElement('option');
   // Définitions des attributs
-  optionElt.id = maisons.nom;
-  optionElt.value = maisons.code;
-  optionElt.textContent = maisons.nom;
+  optionElt.id = nom.nom;
+  optionElt.value = nom.code;
+  optionElt.textContent = nom.nom;
   // Insertion dans le DOM
   document.getElementById('maison').appendChild(optionElt);
+
+  document.getElementById('maison').addEventListener('change', function(e) {
+    //Nouvel élément li pour lister personnages
+    let liElt = document.createElement('li');
+    let CodeMaison = e.target.value;
+    
 });
